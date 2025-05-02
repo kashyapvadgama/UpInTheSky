@@ -1,12 +1,10 @@
 import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Button from './Button';
-import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
-
 
 // SVG icons
-import Qw2 from '../assets/qw2.svg'; 
-import Qw3 from '../assets/qw3.svg'; 
+import Qw2 from '../assets/qw2.svg'; // external-link
+import Qw3 from '../assets/qw3.svg'; // download
 import Qw5 from '../assets/qw5.svg';
 import Qw4 from '../assets/qw4.svg';
 import Qw1 from '../assets/qw1.svg';
@@ -22,7 +20,7 @@ const ButtonScreen = () => {
         <Text style={styles.screenTitle}>Button Components</Text>
 
         {/* Normal State Section */}
-        <View style={[styles.section, { flex: 3 }]}>
+        <View style={[styles.section,{flex:4}]}>
           <Text style={styles.sectionTitle}>Normal State</Text>
           <View style={styles.row}>
             <View style={styles.column}>
@@ -82,7 +80,7 @@ const ButtonScreen = () => {
         </View>
 
         {/* Action Buttons Section */}
-        <View style={[styles.section, { flex: 1 }]}>
+        <View style={[styles.section,{flex:1}]}>
           <Text style={styles.sectionTitle}>Action Buttons</Text>
 
           <View style={styles.row}>
@@ -109,7 +107,7 @@ const ButtonScreen = () => {
         </View>
 
         {/* Action Button Hover State */}
-        <View style={[styles.section, { flex: 1 }]}>
+        <View style={[styles.section,{flex:1}]}>
           <Text style={styles.sectionTitle}>Action Button - Hover</Text>
 
           <View style={styles.fullWidth}>
@@ -132,62 +130,62 @@ export default ButtonScreen;
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#0A205C',
+    backgroundColor: '#0A205C', // Dark navy background from Figma
   },
   container: {
-    padding: scale(16),
+    padding: 16,
     flex: 1,
   },
   screenTitle: {
-    fontSize: moderateScale(24),
+    fontSize: 24,
     fontWeight: 'bold',
     color: '#FFFFFF',
-    marginBottom: verticalScale(20),
+    marginBottom: 20,
     textAlign: 'center',
   },
   section: {
-    marginBottom: verticalScale(30),
-    padding: scale(16),
-    borderRadius: scale(8),
-    backgroundColor: '#0A205C',
+    marginBottom: 30,
+    padding: 16,
+    borderRadius: 8,
+    backgroundColor: '#0A205C', // Keeping same as background for now
   },
   sectionTitle: {
-    fontSize: moderateScale(18),
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#FFFFFF',
-    marginBottom: verticalScale(16),
+    marginBottom: 16,
   },
   componentTitle: {
-    fontSize: moderateScale(14),
-    marginBottom: verticalScale(8),
+    fontSize: 14,
+    marginBottom: 8,
     fontWeight: '500',
-    color: '#8FA3D4',
+    color: '#8FA3D4', // Light blue/grey for component titles
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: verticalScale(16),
+    marginBottom: 16,
   },
   column: {
     flex: 1,
-    marginHorizontal: scale(8),
+    marginHorizontal: 8,
   },
   fullWidth: {
     width: '100%',
-    marginBottom: verticalScale(16),
+    marginBottom: 16,
   },
   buttonSpacing: {
-    marginTop: verticalScale(16),
+    marginTop: 16,
   },
   iconButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: verticalScale(12),
-    paddingHorizontal: scale(16),
-    borderRadius: scale(4),
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 4,
   },
   destructiveButton: {
-    backgroundColor: '#DC2626',
+    backgroundColor: '#DC2626', // Red for destructive action
   },
   actionButton: {
     backgroundColor: '#FFFFFF',
@@ -198,25 +196,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#E5E7EB',
   },
   actionHoverButton: {
-    backgroundColor: '#F9FAFB',
+    backgroundColor: '#F9FAFB', // Light hover color
   },
   buttonText: {
     color: '#FFFFFF',
-    marginLeft: scale(8),
+    marginLeft: 8,
     fontWeight: '500',
   },
   actionButtonText: {
-    color: '#111827',
-    marginLeft: scale(8),
+    color: '#111827', // Dark text for action buttons
+    marginLeft: 8,
     fontWeight: '500',
   },
   downloadButtonText: {
-    color: '#1F2937',
-    marginLeft: scale(8),
+    color: '#1F2937', // Dark color for download button text
+    marginLeft: 8,
     fontWeight: '500',
   },
   icon: {
     opacity: 0.9,
   },
 });
-
